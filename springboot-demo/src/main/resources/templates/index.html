@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Find Your Lucky Number</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      flex-direction: column;
+      background-color: #fdf6e3;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    form input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      border: none;
+      background-color: #ffcc66;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #ffb347;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter your name to get your lucky number ✨</h2>
+  <form action="/lucky-number" method="post">
+    <input type="text" name="name" placeholder="Your name" required />
+    <button type="submit">Get Lucky!</button>
+  </form>
+</body>
+</html>

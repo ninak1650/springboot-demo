@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Your Lucky Number</title>
+  <style>
+    body {
+      background-color: #fef9f1;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .card {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff8800;
+      margin: 1rem 0;
+    }
+
+    .back-btn {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #ffcc66;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #ffb347;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Dear <span th:text="${name}">[Name]</span> 💌</h2>
+    <p>Your lucky number today is:</p>
+    <div class="number" th:text="${number}">[42]</div>
+    <p th:text="${message}">✨ May this number bring you a little extra magic today! ✨</p>
+    <a href="/" class="back-btn">Try again</a>
+  </div>
+</body>
+</html>
